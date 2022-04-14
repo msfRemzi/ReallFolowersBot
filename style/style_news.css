@@ -1,0 +1,229 @@
+/* ROOT START */
+:root {
+    --PNR:'ProximaNova-Regular';
+    --PNB:'ProximaNova-Bold';
+    --PNL:'ProximaNova-Light';
+    --PNSB:'ProximaNova-Semibold';
+    --ELB:'ElMessiri-Bold';
+    --bodycolor:#162831;
+    --white:#fff;
+    --black:#000;
+    --mcolor:#018ABE;
+    --mradius:0 50px;
+}
+
+::-webkit-scrollbar {
+    background: var(--bodycolor);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--mcolor);
+    border-radius: 50px 0 0 50px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1296px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--PNR);
+    background: var(--bodycolor);
+}
+
+h1, h2, h3 {
+    user-select: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* ROOT END */
+
+/* HEADER START */
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 30px 0;
+}
+
+.header__nav-logo {
+    transition: transform 1s;
+}
+
+.header__nav-logo:hover {
+    transform: rotate(360deg);
+}
+
+.header__nav-list {
+    display: flex;
+    column-gap: 50px;
+}
+
+.nav__list-link {
+    font-size: 14px;
+    line-height: 135%;
+    color: var(--white);
+    position: relative;
+    transition: filter 0.5s, font-size 0.3s, line-height 1s;
+}
+
+.nav__list-link:hover {
+    filter: contrast(100%);
+    font-size: 25px;
+    line-height: 150%;
+}
+
+.header__nav-link {
+    max-width: 155px;
+    width: 100%;
+    background: #018ABE;
+    border-radius: 3px;
+    padding: 9px 0;
+    font-family: var(--PNSB);
+    font-size: 13px;
+    line-height: 140%;
+    color: var(--white);
+    text-align: center;
+    transition: outline 1s, background 0.7s, color 1.5s;
+}
+
+.header__nav-link:hover {
+    outline: 5px solid #000;
+    background: var(--white);
+    color: var(--black);
+}
+
+/* MAIN START */
+.main__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__box-title {
+    padding: 60px 0;
+    font-family: var(--ELB);
+    color: var(--white);
+    font-size: 42px;
+    line-height: 140%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 45px;
+}
+
+.main__box-title::before {
+    content: '';
+    display: block;
+    border-radius: var(--mradius);
+    background: var(--mcolor);
+    width: 28px;
+    height: 14px;
+}
+
+.main__box-title::after {
+    content: '';
+    display: block;
+    border-radius: var(--mradius);
+    background: var(--mcolor);
+    width: 28px;
+    height: 14px;
+    transform: rotateX(180deg);
+}
+
+.main__box-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 258px;
+    gap: 24px;
+}
+
+.main__box-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.main__box-item:hover .box-item-img {
+    transform: scale(1.2);
+}
+
+.box-item-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -20;
+    height: 100%;
+    transition: transform 1s;
+}
+
+.box-item-text {
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    font-family: var(--PNB);
+    font-size: 14px;
+    line-height: 135%;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background: var(--mcolor);
+    color: var(--white);
+    text-align: center;
+}
+
+.box-item-title {
+    position: absolute;
+    bottom: 30px;
+    left: 35px;
+    font-family: var(--ELB);
+    color: var(--white);
+    font-size: 21px;
+    line-height: 140%;
+}
+/* MAIN END */
+
+/* FOOTER START */
+.footer {
+    margin-top: 120px;
+}
+
+.section__footer-postmap {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 30px;
+}
+
+.postmap-left {
+    font-size: 14px;
+    line-height: 135%;
+    color: var(--white);
+}
+
+.postmap-right {
+    font-family: var(--PNB);
+    color: var(--white);
+    font-size: 14px;
+    line-height: 135%;
+}
+/* FOOTER END */
